@@ -40,6 +40,9 @@ angular.module('DuplicateRequestsFilter.Decorator', [])
      */
     function getRequestIdentifier(config) {
       let str = config.method + config.url;
+      if (config.params && typeof config.params === 'object') {
+        str += angular.toJson(config.params);
+      }
       if (config.data && typeof config.data === 'object') {
         str += angular.toJson(config.data);
       }
@@ -66,7 +69,7 @@ angular.module('DuplicateRequestsFilter.Decorator', [])
             data: '',
             headers: {},
             status: config.rejectDuplicateStatusCode || 400,
-            config: config
+            config: config,
           });
         }
         return pendingRequests[identifier];
