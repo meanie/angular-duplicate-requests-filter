@@ -51,6 +51,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
        */
       function getRequestIdentifier(config) {
         var str = config.method + config.url;
+        if (config.params && _typeof(config.params) === 'object') {
+          str += angular.toJson(config.params);
+        }
         if (config.data && _typeof(config.data) === 'object') {
           str += angular.toJson(config.data);
         }
