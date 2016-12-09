@@ -46,4 +46,4 @@ Pull requests are welcome! If you would like to contribute to Meanie, please che
 
 (MIT License)
 
-Copyright 2016, [Adam Buczynski](http://adambuczynski.com)
+Copyright 2016-2017, [Adam Reis](http://adam.reis.nz)
