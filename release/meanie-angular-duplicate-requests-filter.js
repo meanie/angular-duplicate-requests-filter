@@ -1,7 +1,7 @@
 /**
  * meanie-angular-duplicate-requests-filter * https://github.com/meanie/angular-duplicate-requests-filter
  *
- * Copyright (c) 2016 Adam Buczynski <me@adambuczynski.com>
+ * Copyright (c) 2016 Adam Reis <adam@reis.nz>
  * License: MIT
  */
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
