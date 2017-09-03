@@ -1,15 +1,18 @@
 {
-  "name": "meanie-angular-duplicate-requests-filter",
+  "name": "@meanie/angular-duplicate-requests-filter",
   "description": "A decorator for the Angular $http service to filter duplicate requests",
-  "version": "1.2.1",
+  "version": "2.0.0",
   "homepage": "https://github.com/meanie/angular-duplicate-requests-filter",
   "author": {
     "name": "Adam Reis",
     "email": "adam@reis.nz",
-    "url": "http://adam.reis.nz/"
+    "url": "https://adam.reis.nz/"
   },
   "contributors": [],
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/meanie/angular-duplicate-requests-filter"
@@ -32,22 +35,21 @@
   ],
   "main": "index.js",
   "scripts": {
-    "lint": "eslint . --fix",
     "release": "gulp release",
-    "version": "npm run release && git add release/*",
+    "version": "yarn release && git add release/*",
     "postversion": "git push && git push --tags && npm publish"
   },
   "devDependencies": {
-    "babel-preset-es2015-without-strict": "^0.0.2",
-    "eslint": "^3.1.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015-without-strict": "^0.0.4",
     "gulp": "github:gulpjs/gulp#4.0",
-    "gulp-babel": "^6.1.2",
-    "gulp-concat": "^2.6.0",
-    "gulp-filter": "^4.0.0",
+    "gulp-babel": "^7.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-filter": "^5.0.1",
     "gulp-ng-annotate": "^2.0.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^1.5.4",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
     "gulp-wrapper": "^1.0.0"
   }
 }

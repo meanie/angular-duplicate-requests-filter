@@ -3,16 +3,16 @@
 /**
  * Dependencies
  */
-let fs = require('fs');
-let gulp = require('gulp');
-let babel = require('gulp-babel');
-let concat = require('gulp-concat');
-let uglify = require('gulp-uglify');
-let rename = require('gulp-rename');
-let filter = require('gulp-filter');
-let wrapper = require('gulp-wrapper');
-let sourcemaps = require('gulp-sourcemaps');
-let ngAnnotate = require('gulp-ng-annotate');
+const fs = require('fs');
+const gulp = require('gulp');
+const babel = require('gulp-babel');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const rename = require('gulp-rename');
+const filter = require('gulp-filter');
+const wrapper = require('gulp-wrapper');
+const sourcemaps = require('gulp-sourcemaps');
+const ngAnnotate = require('gulp-ng-annotate');
 
 /**
  * Package and configuration
@@ -36,7 +36,7 @@ function packageJson() {
 function packageFileName(filename, ext) {
   if (!ext) {
     ext = filename;
-    filename = pkg.name.toLowerCase();
+    filename = pkg.name.replace('@meanie/', '');
   }
   return filename + (ext || '');
 }
@@ -60,11 +60,11 @@ function bannerWrapper() {
   packageJson();
 
   //Get date and author
-  let today = new Date();
-  let author = pkg.author.name + ' <' + pkg.author.email + '>';
+  const today = new Date();
+  const author = pkg.author.name + ' <' + pkg.author.email + '>';
 
   //Format banner
-  let banner =
+  const banner =
     '/**\n' +
     ' * ' + pkg.name +
     ' * ' + pkg.homepage + '\n' +
@@ -88,7 +88,7 @@ function bannerWrapper() {
  * Build release files
  */
 function release() {
-  let jsFilter = filter(['*.js'], {
+  const jsFilter = filter(['*.js'], {
     restore: true,
   });
   return gulp.src([

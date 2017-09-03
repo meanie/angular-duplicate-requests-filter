@@ -1,7 +1,7 @@
 root: true
 extends: eslint:recommended
 parserOptions:
-  ecmaVersion: 6
+  ecmaVersion: 2017
   ecmaFeatures:
     impliedStrict: true
   sourceType: module
@@ -13,6 +13,7 @@ env:
   jasmine: true
 globals:
   angular: false
+  Raven: false
 rules:
   linebreak-style:
     - error
@@ -23,6 +24,8 @@ rules:
       tabWidth: 2
       ignoreComments: true
       ignoreUrls: true
+      ignoreTemplateLiterals: true
+      ignoreRegExpLiterals: true
   indent:
     - error
     - 2
@@ -30,6 +33,7 @@ rules:
       VariableDeclarator:
         let: 2
         const: 3
+      MemberExpression: off
   semi:
     - error
     - always
@@ -41,6 +45,9 @@ rules:
     - error
     - single
     - allowTemplateLiterals: true
+  quote-props:
+    - error
+    - as-needed
   curly:
     - error
     - all
@@ -125,6 +132,10 @@ rules:
   no-multiple-empty-lines:
     - error
     - max: 1
+  no-unused-vars:
+    - error
+    - vars: all
+      args: all
   eol-last: error
   dot-notation: error
   space-infix-ops: error
@@ -140,3 +151,4 @@ rules:
   no-whitespace-before-property: error
   no-lonely-if: error
   no-var: error
+  no-console: warn

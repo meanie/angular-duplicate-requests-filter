@@ -1,2 +1,2 @@
-require('./release/meanie-angular-duplicate-requests-filter');
+require('./release/angular-duplicate-requests-filter');
 module.exports = 'DuplicateRequestsFilter.Decorator';
