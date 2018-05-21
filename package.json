@@ -1,7 +1,7 @@
 {
   "name": "@meanie/angular-duplicate-requests-filter",
   "description": "A decorator for the Angular $http service to filter duplicate requests",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "homepage": "https://github.com/meanie/angular-duplicate-requests-filter",
   "author": {
     "name": "Adam Reis",

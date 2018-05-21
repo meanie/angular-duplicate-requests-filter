@@ -1,7 +1,7 @@
 /**
  * @meanie/angular-duplicate-requests-filter * https://github.com/meanie/angular-duplicate-requests-filter
  *
- * Copyright (c) 2017 Adam Reis <adam@reis.nz>
+ * Copyright (c) 2018 Adam Reis <adam@reis.nz>
  * License: MIT
  */
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -101,6 +101,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       }).forEach(function (key) {
         return $duplicateRequestsFilter[key] = $http[key];
       });
+
+      //Map defaults
+      $duplicateRequestsFilter.defaults = $http.defaults;
 
       //Return it
       return $duplicateRequestsFilter;
