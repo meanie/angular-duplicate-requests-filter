@@ -85,9 +85,13 @@ angular.module('DuplicateRequestsFilter.Decorator', [])
     }
 
     //Map rest of methods
-    Object.keys($http)
+    Object
+      .keys($http)
       .filter(key => (typeof $http[key] === 'function'))
       .forEach(key => $duplicateRequestsFilter[key] = $http[key]);
+
+    //Map defaults
+    $duplicateRequestsFilter.defaults = $http.defaults;
 
     //Return it
     return $duplicateRequestsFilter;
